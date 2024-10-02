@@ -380,8 +380,8 @@ but looking for '{self.file_type}'"
         exif_data = Exif(filename).data()
         target_file_type = None
 
-        if exif_data and 'MIMEType' in exif_data:
-            target_file_type = self.get_file_type(exif_data['MIMEType'])
+        if exif_data and 'File:MIMEType' in exif_data:
+            target_file_type = self.get_file_type(exif_data['File:MIMEType'])
 
         date = None
         if target_file_type in ['image', 'video']:
